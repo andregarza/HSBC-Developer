@@ -1,9 +1,12 @@
-const server = http.createServer((req, res) => {
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'text/plain')
-    res.end('Hello Yorch\n')
-  })
+const hostname = "localhost://";
+const port = "800";
 
-  server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`)
-  })
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader("Content-Type", "text/plain");
+  res.end("Hello Team\n");
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
